@@ -1,0 +1,34 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
+# The set of languages for which implicit dependencies are needed:
+set(CMAKE_DEPENDS_LANGUAGES
+  )
+
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/bootstrap.c" "CMakeFiles/thingino-cloner.dir/src/bootstrap.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/bootstrap.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/ddr/parser.c" "CMakeFiles/thingino-cloner.dir/src/ddr/parser.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/ddr/parser.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/firmware/flash_descriptor.c" "CMakeFiles/thingino-cloner.dir/src/firmware/flash_descriptor.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/firmware/flash_descriptor.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/firmware/handshake.c" "CMakeFiles/thingino-cloner.dir/src/firmware/handshake.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/firmware/handshake.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/firmware/loader.c" "CMakeFiles/thingino-cloner.dir/src/firmware/loader.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/firmware/loader.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/firmware/reader.c" "CMakeFiles/thingino-cloner.dir/src/firmware/reader.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/firmware/reader.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/main.c" "CMakeFiles/thingino-cloner.dir/src/main.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/main.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/usb/device.c" "CMakeFiles/thingino-cloner.dir/src/usb/device.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/usb/device.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/usb/manager.c" "CMakeFiles/thingino-cloner.dir/src/usb/manager.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/usb/manager.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/usb/protocol.c" "CMakeFiles/thingino-cloner.dir/src/usb/protocol.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/usb/protocol.c.o.d"
+  "/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/utils.c" "CMakeFiles/thingino-cloner.dir/src/utils.c.o" "gcc" "CMakeFiles/thingino-cloner.dir/src/utils.c.o.d"
+  "" "thingino-cloner" "gcc" "CMakeFiles/thingino-cloner.dir/link.d"
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
+  )
+
+# Fortran module output directory.
+set(CMAKE_Fortran_TARGET_MODULE_DIR "")

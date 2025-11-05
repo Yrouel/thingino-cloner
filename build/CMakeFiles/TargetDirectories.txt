@@ -1,0 +1,7 @@
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/thingino-cloner.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/edit_cache.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/rebuild_cache.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/list_install_components.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/install.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/install/local.dir
+/home/squash/go/src/github.com/wltechblog/thingino-cloner-c/build/CMakeFiles/install/strip.dir

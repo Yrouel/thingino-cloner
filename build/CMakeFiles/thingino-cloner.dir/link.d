@@ -11,6 +11,13 @@ thingino-cloner: \
   CMakeFiles/thingino-cloner.dir/src/firmware/handshake.c.o \
   CMakeFiles/thingino-cloner.dir/src/firmware/flash_descriptor.c.o \
   CMakeFiles/thingino-cloner.dir/src/ddr/parser.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_utils.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_controller.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_param_builder.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy_ddr2.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_ctrl_txx.c.o \
+  CMakeFiles/thingino-cloner.dir/src/ddr/ddr_generator.c.o \
   CMakeFiles/thingino-cloner.dir/src/utils.c.o \
   CMakeFiles/thingino-cloner.dir/src/bootstrap.c.o \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/libusb-1.0.so \
@@ -65,6 +72,20 @@ CMakeFiles/thingino-cloner.dir/src/firmware/handshake.c.o:
 CMakeFiles/thingino-cloner.dir/src/firmware/flash_descriptor.c.o:
 
 CMakeFiles/thingino-cloner.dir/src/ddr/parser.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_utils.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_controller.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_param_builder.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy_ddr2.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_ctrl_txx.c.o:
+
+CMakeFiles/thingino-cloner.dir/src/ddr/ddr_generator.c.o:
 
 CMakeFiles/thingino-cloner.dir/src/utils.c.o:
 

@@ -12,6 +12,7 @@ pkg_check_modules(LIBUSB REQUIRED libusb-1.0)
 # Include directories
 include_directories(${LIBUSB_INCLUDE_DIRS})
 include_directories(include)
+include_directories(src/ddr)
 
 # Compiler flags
 add_compile_options(-Wall -Wextra -Werror)
@@ -28,6 +29,13 @@ set(SOURCES
     src/firmware/handshake.c
     src/firmware/flash_descriptor.c
     src/ddr/parser.c
+    src/ddr/ddr_utils.c
+    src/ddr/ddr_controller.c
+    src/ddr/ddr_param_builder.c
+    src/ddr/ddr_phy.c
+    src/ddr/ddr_phy_ddr2.c
+    src/ddr/ddr_ctrl_txx.c
+    src/ddr/ddr_generator.c
     src/utils.c
     src/bootstrap.c
 )
@@ -37,6 +45,57 @@ add_executable(thingino-cloner ${SOURCES})
 
 # Link libraries
 target_link_libraries(thingino-cloner ${LIBUSB_LIBRARIES})
+
+# Test executable for DDR generator
+add_executable(test_ddr_generator
+    src/test_ddr_generator.c
+    src/ddr/ddr_utils.c
+    src/ddr/ddr_controller.c
+    src/ddr/ddr_param_builder.c
+    src/ddr/ddr_phy.c
+    src/ddr/ddr_phy_ddr2.c
+    src/ddr/ddr_ctrl_txx.c
+    src/ddr/ddr_generator.c
+)
+
+# Test executable for multi-chip DDR generation
+add_executable(test_ddr_multiplechip
+    src/test_ddr_multiplechip.c
+    src/ddr/ddr_utils.c
+    src/ddr/ddr_controller.c
+    src/ddr/ddr_param_builder.c
+    src/ddr/ddr_phy.c
+    src/ddr/ddr_phy_ddr2.c
+    src/ddr/ddr_ctrl_txx.c
+    src/ddr/ddr_generator.c
+)
+
+# Test executable for reference binary analysis
+add_executable(test_ddr_reference_analysis
+    src/test_ddr_reference_analysis.c
+)
+
+# Test executable for DDR mapping analysis
+add_executable(test_ddr_mapping_analysis
+    src/test_ddr_mapping_analysis.c
+    src/ddr/ddr_utils.c
+    src/ddr/ddr_controller.c
+    src/ddr/ddr_param_builder.c
+    src/ddr/ddr_phy.c
+    src/ddr/ddr_phy_ddr2.c
+    src/ddr/ddr_ctrl_txx.c
+    src/ddr/ddr_generator.c
+)
+
+# Test executable for TXX mapping analysis
+add_executable(test_txx_mapping_analysis
+    src/test_txx_mapping_analysis.c
+)
+
+# Test executable for DDRC analysis
+add_executable(test_ddrc_analysis
+    src/test_ddrc_analysis.c
+)
 
 # Installation
 install(TARGETS thingino-cloner DESTINATION bin)

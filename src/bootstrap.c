@@ -52,7 +52,21 @@ thingino_error_t bootstrap_device(usb_device_t* device, const bootstrap_config_t
     // Load firmware files
     DEBUG_PRINT("Loading firmware files...\n");
     firmware_files_t fw;
-    result = firmware_load(device->info.variant, &fw);
+
+    // Check if custom files are provided
+    if (config->config_file || config->spl_file || config->uboot_file) {
+        DEBUG_PRINT("Using custom firmware files:\n");
+        if (config->config_file) DEBUG_PRINT("  Config: %s\n", config->config_file);
+        if (config->spl_file) DEBUG_PRINT("  SPL: %s\n", config->spl_file);
+        if (config->uboot_file) DEBUG_PRINT("  U-Boot: %s\n", config->uboot_file);
+
+        result = firmware_load_from_files(device->info.variant,
+            config->config_file, config->spl_file, config->uboot_file, &fw);
+    } else {
+        DEBUG_PRINT("Using default firmware files\n");
+        result = firmware_load(device->info.variant, &fw);
+    }
+
     if (result != THINGINO_SUCCESS) {
         DEBUG_PRINT("Firmware load failed: %s\n", thingino_error_to_string(result));
         return result;

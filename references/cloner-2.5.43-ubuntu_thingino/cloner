@@ -1,0 +1,56 @@
+#!/bin/sh
+RULES_BURNER_FILE="/etc/udev/rules.d/50-burner.rules"
+if [ ! -f "$RULES_BURNER_FILE" ]; then
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"d002\", GROUP=\"$LOGNAME\""	\
+		| sudo tee $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"1000\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"4775\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"4785\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"4780\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"c309\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+	echo "SUBSYSTEM==\"usb\", ATTR{idVendor}==\"a108\", ATTR{idProduct}==\"eaef\", GROUP=\"$LOGNAME\""	\
+		| sudo tee -a $RULES_BURNER_FILE;
+
+	sudo udevadm control --reload-rules ;
+	sudo /etc/init.d/udev restart ;
+fi
+
+SYS_BIT=`getconf LONG_BIT`
+DIR_NAME=${SYS_BIT}bit
+
+LD_BURNER_CONF="/etc/ld.so.conf.d/burner.conf"
+if [ ! -f "$LD_BURNER_CONF" ]; then
+	echo "$PWD/lib/$DIR_NAME/" | sudo tee $LD_BURNER_CONF ;
+	echo "$PWD/qt/lib/" | sudo tee -a $LD_BURNER_CONF ;
+	sudo ldconfig ;
+else
+	if ! grep -q "$PWD" "$LD_BURNER_CONF"; then
+		echo "$PWD/lib/$DIR_NAME/" | sudo tee $LD_BURNER_CONF ;
+		echo "$PWD/qt/lib/" | sudo tee -a $LD_BURNER_CONF ;
+		sudo ldconfig ;
+	fi
+fi
+
+CUR_GROUP=`ls -l cloner | awk '{print $3}'`
+if [ "$CUR_GROUP" != "$LOGNAME" ]; then
+	sudo chown -R $LOGNAME.$LOGNAME . ;
+	sudo chmod +x $PWD/bin/$DIR_NAME/cloner_$SYS_BIT $PWD/bin/$DIR_NAME/core_$SYS_BIT ;
+fi
+
+KILL_PROC=`ps -C "core_$SYS_BIT" -o cmd --no-heading | wc -w`
+if [ "$KILL_PROC" -gt 0 ]; then
+	sudo killall cloner_$SYS_BIT 2> /dev/null ;
+	sudo killall core_$SYS_BIT 2> /dev/null ;
+fi
+
+if [ -f $PWD/adb/unix/${SYS_BIT}bit/adb ]; then
+	sudo $PWD/adb/unix/${SYS_BIT}bit/adb kill-server ;
+	sudo $PWD/adb/unix/${SYS_BIT}bit/adb start-server ;
+fi
+
+$PWD/bin/$DIR_NAME/cloner_$SYS_BIT

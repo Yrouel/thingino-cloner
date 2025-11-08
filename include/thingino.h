@@ -193,6 +193,9 @@ typedef struct {
     int timeout;
     bool verbose;
     bool skip_ddr;
+    const char* config_file;  // Custom DDR config file path (NULL = use default)
+    const char* spl_file;     // Custom SPL file path (NULL = use default)
+    const char* uboot_file;   // Custom U-Boot file path (NULL = use default)
 } bootstrap_config_t;
 
 // Bootstrap progress

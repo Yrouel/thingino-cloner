@@ -174,6 +174,84 @@ thingino-cloner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/build
 .PHONY : thingino-cloner/fast
 
+#=============================================================================
+# Target rules for targets named test_ddr_generator
+
+# Build rule for target.
+test_ddr_generator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ddr_generator
+.PHONY : test_ddr_generator
+
+# fast build rule for target.
+test_ddr_generator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/build
+.PHONY : test_ddr_generator/fast
+
+#=============================================================================
+# Target rules for targets named test_ddr_multiplechip
+
+# Build rule for target.
+test_ddr_multiplechip: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ddr_multiplechip
+.PHONY : test_ddr_multiplechip
+
+# fast build rule for target.
+test_ddr_multiplechip/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/build
+.PHONY : test_ddr_multiplechip/fast
+
+#=============================================================================
+# Target rules for targets named test_ddr_reference_analysis
+
+# Build rule for target.
+test_ddr_reference_analysis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ddr_reference_analysis
+.PHONY : test_ddr_reference_analysis
+
+# fast build rule for target.
+test_ddr_reference_analysis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_reference_analysis.dir/build.make CMakeFiles/test_ddr_reference_analysis.dir/build
+.PHONY : test_ddr_reference_analysis/fast
+
+#=============================================================================
+# Target rules for targets named test_ddr_mapping_analysis
+
+# Build rule for target.
+test_ddr_mapping_analysis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ddr_mapping_analysis
+.PHONY : test_ddr_mapping_analysis
+
+# fast build rule for target.
+test_ddr_mapping_analysis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/build
+.PHONY : test_ddr_mapping_analysis/fast
+
+#=============================================================================
+# Target rules for targets named test_txx_mapping_analysis
+
+# Build rule for target.
+test_txx_mapping_analysis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_txx_mapping_analysis
+.PHONY : test_txx_mapping_analysis
+
+# fast build rule for target.
+test_txx_mapping_analysis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_txx_mapping_analysis.dir/build.make CMakeFiles/test_txx_mapping_analysis.dir/build
+.PHONY : test_txx_mapping_analysis/fast
+
+#=============================================================================
+# Target rules for targets named test_ddrc_analysis
+
+# Build rule for target.
+test_ddrc_analysis: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_ddrc_analysis
+.PHONY : test_ddrc_analysis
+
+# fast build rule for target.
+test_ddrc_analysis/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddrc_analysis.dir/build.make CMakeFiles/test_ddrc_analysis.dir/build
+.PHONY : test_ddrc_analysis/fast
+
 src/bootstrap.o: src/bootstrap.c.o
 .PHONY : src/bootstrap.o
 
@@ -197,6 +275,237 @@ src/bootstrap.s: src/bootstrap.c.s
 src/bootstrap.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/bootstrap.c.s
 .PHONY : src/bootstrap.c.s
+
+src/ddr/ddr_controller.o: src/ddr/ddr_controller.c.o
+.PHONY : src/ddr/ddr_controller.o
+
+# target to build an object file
+src/ddr/ddr_controller.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_controller.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_controller.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_controller.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_controller.c.o
+.PHONY : src/ddr/ddr_controller.c.o
+
+src/ddr/ddr_controller.i: src/ddr/ddr_controller.c.i
+.PHONY : src/ddr/ddr_controller.i
+
+# target to preprocess a source file
+src/ddr/ddr_controller.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_controller.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_controller.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_controller.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_controller.c.i
+.PHONY : src/ddr/ddr_controller.c.i
+
+src/ddr/ddr_controller.s: src/ddr/ddr_controller.c.s
+.PHONY : src/ddr/ddr_controller.s
+
+# target to generate assembly for a file
+src/ddr/ddr_controller.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_controller.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_controller.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_controller.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_controller.c.s
+.PHONY : src/ddr/ddr_controller.c.s
+
+src/ddr/ddr_ctrl_txx.o: src/ddr/ddr_ctrl_txx.c.o
+.PHONY : src/ddr/ddr_ctrl_txx.o
+
+# target to build an object file
+src/ddr/ddr_ctrl_txx.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_ctrl_txx.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_ctrl_txx.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_ctrl_txx.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_ctrl_txx.c.o
+.PHONY : src/ddr/ddr_ctrl_txx.c.o
+
+src/ddr/ddr_ctrl_txx.i: src/ddr/ddr_ctrl_txx.c.i
+.PHONY : src/ddr/ddr_ctrl_txx.i
+
+# target to preprocess a source file
+src/ddr/ddr_ctrl_txx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_ctrl_txx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_ctrl_txx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_ctrl_txx.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_ctrl_txx.c.i
+.PHONY : src/ddr/ddr_ctrl_txx.c.i
+
+src/ddr/ddr_ctrl_txx.s: src/ddr/ddr_ctrl_txx.c.s
+.PHONY : src/ddr/ddr_ctrl_txx.s
+
+# target to generate assembly for a file
+src/ddr/ddr_ctrl_txx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_ctrl_txx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_ctrl_txx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_ctrl_txx.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_ctrl_txx.c.s
+.PHONY : src/ddr/ddr_ctrl_txx.c.s
+
+src/ddr/ddr_generator.o: src/ddr/ddr_generator.c.o
+.PHONY : src/ddr/ddr_generator.o
+
+# target to build an object file
+src/ddr/ddr_generator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_generator.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_generator.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_generator.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_generator.c.o
+.PHONY : src/ddr/ddr_generator.c.o
+
+src/ddr/ddr_generator.i: src/ddr/ddr_generator.c.i
+.PHONY : src/ddr/ddr_generator.i
+
+# target to preprocess a source file
+src/ddr/ddr_generator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_generator.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_generator.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_generator.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_generator.c.i
+.PHONY : src/ddr/ddr_generator.c.i
+
+src/ddr/ddr_generator.s: src/ddr/ddr_generator.c.s
+.PHONY : src/ddr/ddr_generator.s
+
+# target to generate assembly for a file
+src/ddr/ddr_generator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_generator.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_generator.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_generator.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_generator.c.s
+.PHONY : src/ddr/ddr_generator.c.s
+
+src/ddr/ddr_param_builder.o: src/ddr/ddr_param_builder.c.o
+.PHONY : src/ddr/ddr_param_builder.o
+
+# target to build an object file
+src/ddr/ddr_param_builder.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_param_builder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_param_builder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_param_builder.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_param_builder.c.o
+.PHONY : src/ddr/ddr_param_builder.c.o
+
+src/ddr/ddr_param_builder.i: src/ddr/ddr_param_builder.c.i
+.PHONY : src/ddr/ddr_param_builder.i
+
+# target to preprocess a source file
+src/ddr/ddr_param_builder.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_param_builder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_param_builder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_param_builder.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_param_builder.c.i
+.PHONY : src/ddr/ddr_param_builder.c.i
+
+src/ddr/ddr_param_builder.s: src/ddr/ddr_param_builder.c.s
+.PHONY : src/ddr/ddr_param_builder.s
+
+# target to generate assembly for a file
+src/ddr/ddr_param_builder.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_param_builder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_param_builder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_param_builder.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_param_builder.c.s
+.PHONY : src/ddr/ddr_param_builder.c.s
+
+src/ddr/ddr_phy.o: src/ddr/ddr_phy.c.o
+.PHONY : src/ddr/ddr_phy.o
+
+# target to build an object file
+src/ddr/ddr_phy.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy.c.o
+.PHONY : src/ddr/ddr_phy.c.o
+
+src/ddr/ddr_phy.i: src/ddr/ddr_phy.c.i
+.PHONY : src/ddr/ddr_phy.i
+
+# target to preprocess a source file
+src/ddr/ddr_phy.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy.c.i
+.PHONY : src/ddr/ddr_phy.c.i
+
+src/ddr/ddr_phy.s: src/ddr/ddr_phy.c.s
+.PHONY : src/ddr/ddr_phy.s
+
+# target to generate assembly for a file
+src/ddr/ddr_phy.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy.c.s
+.PHONY : src/ddr/ddr_phy.c.s
+
+src/ddr/ddr_phy_ddr2.o: src/ddr/ddr_phy_ddr2.c.o
+.PHONY : src/ddr/ddr_phy_ddr2.o
+
+# target to build an object file
+src/ddr/ddr_phy_ddr2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy_ddr2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy_ddr2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy_ddr2.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy_ddr2.c.o
+.PHONY : src/ddr/ddr_phy_ddr2.c.o
+
+src/ddr/ddr_phy_ddr2.i: src/ddr/ddr_phy_ddr2.c.i
+.PHONY : src/ddr/ddr_phy_ddr2.i
+
+# target to preprocess a source file
+src/ddr/ddr_phy_ddr2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy_ddr2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy_ddr2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy_ddr2.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy_ddr2.c.i
+.PHONY : src/ddr/ddr_phy_ddr2.c.i
+
+src/ddr/ddr_phy_ddr2.s: src/ddr/ddr_phy_ddr2.c.s
+.PHONY : src/ddr/ddr_phy_ddr2.s
+
+# target to generate assembly for a file
+src/ddr/ddr_phy_ddr2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_phy_ddr2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_phy_ddr2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_phy_ddr2.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_phy_ddr2.c.s
+.PHONY : src/ddr/ddr_phy_ddr2.c.s
+
+src/ddr/ddr_utils.o: src/ddr/ddr_utils.c.o
+.PHONY : src/ddr/ddr_utils.o
+
+# target to build an object file
+src/ddr/ddr_utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_utils.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_utils.c.o
+.PHONY : src/ddr/ddr_utils.c.o
+
+src/ddr/ddr_utils.i: src/ddr/ddr_utils.c.i
+.PHONY : src/ddr/ddr_utils.i
+
+# target to preprocess a source file
+src/ddr/ddr_utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_utils.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_utils.c.i
+.PHONY : src/ddr/ddr_utils.c.i
+
+src/ddr/ddr_utils.s: src/ddr/ddr_utils.c.s
+.PHONY : src/ddr/ddr_utils.s
+
+# target to generate assembly for a file
+src/ddr/ddr_utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/ddr/ddr_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/ddr/ddr_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/ddr/ddr_utils.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/ddr/ddr_utils.c.s
+.PHONY : src/ddr/ddr_utils.c.s
 
 src/ddr/parser.o: src/ddr/parser.c.o
 .PHONY : src/ddr/parser.o
@@ -342,6 +651,150 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/thingino-cloner.dir/build.make CMakeFiles/thingino-cloner.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/test_ddr_generator.o: src/test_ddr_generator.c.o
+.PHONY : src/test_ddr_generator.o
+
+# target to build an object file
+src/test_ddr_generator.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/test_ddr_generator.c.o
+.PHONY : src/test_ddr_generator.c.o
+
+src/test_ddr_generator.i: src/test_ddr_generator.c.i
+.PHONY : src/test_ddr_generator.i
+
+# target to preprocess a source file
+src/test_ddr_generator.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/test_ddr_generator.c.i
+.PHONY : src/test_ddr_generator.c.i
+
+src/test_ddr_generator.s: src/test_ddr_generator.c.s
+.PHONY : src/test_ddr_generator.s
+
+# target to generate assembly for a file
+src/test_ddr_generator.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_generator.dir/build.make CMakeFiles/test_ddr_generator.dir/src/test_ddr_generator.c.s
+.PHONY : src/test_ddr_generator.c.s
+
+src/test_ddr_mapping_analysis.o: src/test_ddr_mapping_analysis.c.o
+.PHONY : src/test_ddr_mapping_analysis.o
+
+# target to build an object file
+src/test_ddr_mapping_analysis.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/test_ddr_mapping_analysis.c.o
+.PHONY : src/test_ddr_mapping_analysis.c.o
+
+src/test_ddr_mapping_analysis.i: src/test_ddr_mapping_analysis.c.i
+.PHONY : src/test_ddr_mapping_analysis.i
+
+# target to preprocess a source file
+src/test_ddr_mapping_analysis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/test_ddr_mapping_analysis.c.i
+.PHONY : src/test_ddr_mapping_analysis.c.i
+
+src/test_ddr_mapping_analysis.s: src/test_ddr_mapping_analysis.c.s
+.PHONY : src/test_ddr_mapping_analysis.s
+
+# target to generate assembly for a file
+src/test_ddr_mapping_analysis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_mapping_analysis.dir/build.make CMakeFiles/test_ddr_mapping_analysis.dir/src/test_ddr_mapping_analysis.c.s
+.PHONY : src/test_ddr_mapping_analysis.c.s
+
+src/test_ddr_multiplechip.o: src/test_ddr_multiplechip.c.o
+.PHONY : src/test_ddr_multiplechip.o
+
+# target to build an object file
+src/test_ddr_multiplechip.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/test_ddr_multiplechip.c.o
+.PHONY : src/test_ddr_multiplechip.c.o
+
+src/test_ddr_multiplechip.i: src/test_ddr_multiplechip.c.i
+.PHONY : src/test_ddr_multiplechip.i
+
+# target to preprocess a source file
+src/test_ddr_multiplechip.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/test_ddr_multiplechip.c.i
+.PHONY : src/test_ddr_multiplechip.c.i
+
+src/test_ddr_multiplechip.s: src/test_ddr_multiplechip.c.s
+.PHONY : src/test_ddr_multiplechip.s
+
+# target to generate assembly for a file
+src/test_ddr_multiplechip.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_multiplechip.dir/build.make CMakeFiles/test_ddr_multiplechip.dir/src/test_ddr_multiplechip.c.s
+.PHONY : src/test_ddr_multiplechip.c.s
+
+src/test_ddr_reference_analysis.o: src/test_ddr_reference_analysis.c.o
+.PHONY : src/test_ddr_reference_analysis.o
+
+# target to build an object file
+src/test_ddr_reference_analysis.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_reference_analysis.dir/build.make CMakeFiles/test_ddr_reference_analysis.dir/src/test_ddr_reference_analysis.c.o
+.PHONY : src/test_ddr_reference_analysis.c.o
+
+src/test_ddr_reference_analysis.i: src/test_ddr_reference_analysis.c.i
+.PHONY : src/test_ddr_reference_analysis.i
+
+# target to preprocess a source file
+src/test_ddr_reference_analysis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_reference_analysis.dir/build.make CMakeFiles/test_ddr_reference_analysis.dir/src/test_ddr_reference_analysis.c.i
+.PHONY : src/test_ddr_reference_analysis.c.i
+
+src/test_ddr_reference_analysis.s: src/test_ddr_reference_analysis.c.s
+.PHONY : src/test_ddr_reference_analysis.s
+
+# target to generate assembly for a file
+src/test_ddr_reference_analysis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddr_reference_analysis.dir/build.make CMakeFiles/test_ddr_reference_analysis.dir/src/test_ddr_reference_analysis.c.s
+.PHONY : src/test_ddr_reference_analysis.c.s
+
+src/test_ddrc_analysis.o: src/test_ddrc_analysis.c.o
+.PHONY : src/test_ddrc_analysis.o
+
+# target to build an object file
+src/test_ddrc_analysis.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddrc_analysis.dir/build.make CMakeFiles/test_ddrc_analysis.dir/src/test_ddrc_analysis.c.o
+.PHONY : src/test_ddrc_analysis.c.o
+
+src/test_ddrc_analysis.i: src/test_ddrc_analysis.c.i
+.PHONY : src/test_ddrc_analysis.i
+
+# target to preprocess a source file
+src/test_ddrc_analysis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddrc_analysis.dir/build.make CMakeFiles/test_ddrc_analysis.dir/src/test_ddrc_analysis.c.i
+.PHONY : src/test_ddrc_analysis.c.i
+
+src/test_ddrc_analysis.s: src/test_ddrc_analysis.c.s
+.PHONY : src/test_ddrc_analysis.s
+
+# target to generate assembly for a file
+src/test_ddrc_analysis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ddrc_analysis.dir/build.make CMakeFiles/test_ddrc_analysis.dir/src/test_ddrc_analysis.c.s
+.PHONY : src/test_ddrc_analysis.c.s
+
+src/test_txx_mapping_analysis.o: src/test_txx_mapping_analysis.c.o
+.PHONY : src/test_txx_mapping_analysis.o
+
+# target to build an object file
+src/test_txx_mapping_analysis.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_txx_mapping_analysis.dir/build.make CMakeFiles/test_txx_mapping_analysis.dir/src/test_txx_mapping_analysis.c.o
+.PHONY : src/test_txx_mapping_analysis.c.o
+
+src/test_txx_mapping_analysis.i: src/test_txx_mapping_analysis.c.i
+.PHONY : src/test_txx_mapping_analysis.i
+
+# target to preprocess a source file
+src/test_txx_mapping_analysis.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_txx_mapping_analysis.dir/build.make CMakeFiles/test_txx_mapping_analysis.dir/src/test_txx_mapping_analysis.c.i
+.PHONY : src/test_txx_mapping_analysis.c.i
+
+src/test_txx_mapping_analysis.s: src/test_txx_mapping_analysis.c.s
+.PHONY : src/test_txx_mapping_analysis.s
+
+# target to generate assembly for a file
+src/test_txx_mapping_analysis.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_txx_mapping_analysis.dir/build.make CMakeFiles/test_txx_mapping_analysis.dir/src/test_txx_mapping_analysis.c.s
+.PHONY : src/test_txx_mapping_analysis.c.s
+
 src/usb/device.o: src/usb/device.c.o
 .PHONY : src/usb/device.o
 
@@ -450,10 +903,37 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test_ddr_generator"
+	@echo "... test_ddr_mapping_analysis"
+	@echo "... test_ddr_multiplechip"
+	@echo "... test_ddr_reference_analysis"
+	@echo "... test_ddrc_analysis"
+	@echo "... test_txx_mapping_analysis"
 	@echo "... thingino-cloner"
 	@echo "... src/bootstrap.o"
 	@echo "... src/bootstrap.i"
 	@echo "... src/bootstrap.s"
+	@echo "... src/ddr/ddr_controller.o"
+	@echo "... src/ddr/ddr_controller.i"
+	@echo "... src/ddr/ddr_controller.s"
+	@echo "... src/ddr/ddr_ctrl_txx.o"
+	@echo "... src/ddr/ddr_ctrl_txx.i"
+	@echo "... src/ddr/ddr_ctrl_txx.s"
+	@echo "... src/ddr/ddr_generator.o"
+	@echo "... src/ddr/ddr_generator.i"
+	@echo "... src/ddr/ddr_generator.s"
+	@echo "... src/ddr/ddr_param_builder.o"
+	@echo "... src/ddr/ddr_param_builder.i"
+	@echo "... src/ddr/ddr_param_builder.s"
+	@echo "... src/ddr/ddr_phy.o"
+	@echo "... src/ddr/ddr_phy.i"
+	@echo "... src/ddr/ddr_phy.s"
+	@echo "... src/ddr/ddr_phy_ddr2.o"
+	@echo "... src/ddr/ddr_phy_ddr2.i"
+	@echo "... src/ddr/ddr_phy_ddr2.s"
+	@echo "... src/ddr/ddr_utils.o"
+	@echo "... src/ddr/ddr_utils.i"
+	@echo "... src/ddr/ddr_utils.s"
 	@echo "... src/ddr/parser.o"
 	@echo "... src/ddr/parser.i"
 	@echo "... src/ddr/parser.s"
@@ -472,6 +952,24 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/test_ddr_generator.o"
+	@echo "... src/test_ddr_generator.i"
+	@echo "... src/test_ddr_generator.s"
+	@echo "... src/test_ddr_mapping_analysis.o"
+	@echo "... src/test_ddr_mapping_analysis.i"
+	@echo "... src/test_ddr_mapping_analysis.s"
+	@echo "... src/test_ddr_multiplechip.o"
+	@echo "... src/test_ddr_multiplechip.i"
+	@echo "... src/test_ddr_multiplechip.s"
+	@echo "... src/test_ddr_reference_analysis.o"
+	@echo "... src/test_ddr_reference_analysis.i"
+	@echo "... src/test_ddr_reference_analysis.s"
+	@echo "... src/test_ddrc_analysis.o"
+	@echo "... src/test_ddrc_analysis.i"
+	@echo "... src/test_ddrc_analysis.s"
+	@echo "... src/test_txx_mapping_analysis.o"
+	@echo "... src/test_txx_mapping_analysis.i"
+	@echo "... src/test_txx_mapping_analysis.s"
 	@echo "... src/usb/device.o"
 	@echo "... src/usb/device.i"
 	@echo "... src/usb/device.s"

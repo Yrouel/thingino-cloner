@@ -70,4 +70,8 @@ CMakeFiles/thingino-cloner.dir/src/firmware/loader.c.o: \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
  /usr/include/strings.h \
- /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h
+ /usr/lib/gcc/x86_64-linux-gnu/14/include/stdbool.h \
+ /home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/ddr/ddr_param_builder.h \
+ /home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/ddr/ddr_generator.h \
+ /home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/ddr/ddr_types.h \
+ /home/squash/go/src/github.com/wltechblog/thingino-cloner-c/src/ddr/ddr_types.h

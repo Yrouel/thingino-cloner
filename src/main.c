@@ -210,7 +210,10 @@ thingino_error_t bootstrap_device_by_index(usb_manager_t* manager, int index, co
         .sdram_address = BOOTLOADER_ADDRESS_SDRAM,
         .timeout = BOOTSTRAP_TIMEOUT_SECONDS,
         .verbose = options->verbose,
-        .skip_ddr = options->skip_ddr
+        .skip_ddr = options->skip_ddr,
+        .config_file = options->config_file,
+        .spl_file = options->spl_file,
+        .uboot_file = options->uboot_file
     };
     
     // Run bootstrap
@@ -267,8 +270,7 @@ thingino_error_t bootstrap_device_by_index(usb_manager_t* manager, int index, co
  * firmware_handshake_read_chunk() function with proper alternating command pattern
  * and status verification. Falls back to vendor-style read if handshake fails.
  */
-thingino_error_t read_firmware_from_device(usb_manager_t* manager, int index, const char* output_file, bool verbose) {
-    (void)verbose; // Suppress unused parameter warning
+thingino_error_t read_firmware_from_device(usb_manager_t* manager, int index, const char* output_file, const cli_options_t* options) {
     // Get devices
     device_info_t* devices;
     int device_count;
@@ -405,18 +407,8 @@ thingino_error_t read_firmware_from_device(usb_manager_t* manager, int index, co
                     free(test_device);
                     test_device = NULL;
 
-                    // Bootstrap device - create a minimal options struct for bootstrap
-                cli_options_t bootstrap_opts = {
-                    .verbose = verbose,
-                    .device_index = index,
-                    .bootstrap = false,
-                    .read_firmware = false,
-                    .write_firmware = false,
-                    .list_devices = false,
-                    .output_file = NULL
-                };
-                
-                result = bootstrap_device_by_index(manager, index, &bootstrap_opts);
+                    // Bootstrap device - pass through the original options to preserve custom file paths
+                result = bootstrap_device_by_index(manager, index, options);
                 
                 if (result != THINGINO_SUCCESS) {
                     printf("Bootstrap failed: %s\n", thingino_error_to_string(result));
@@ -638,8 +630,8 @@ int main(int argc, char* argv[]) {
             exit_code = 1;
         }
     } else if (options.read_firmware) {
-        result = read_firmware_from_device(&manager, options.device_index, 
-            options.output_file, options.verbose);
+        result = read_firmware_from_device(&manager, options.device_index,
+            options.output_file, &options);
         if (result != THINGINO_SUCCESS) {
             exit_code = 1;
         }

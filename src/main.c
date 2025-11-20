@@ -108,8 +108,6 @@ thingino_error_t parse_arguments(int argc, char* argv[], cli_options_t* options)
             options->uboot_file = argv[++i];
         } else if (strcmp(argv[i], "--skip-ddr") == 0) {
             options->skip_ddr = true;
-        } else if (strcmp(argv[i], "--auto-ddr") == 0) {
-            options->auto_ddr = true;
         } else if (strcmp(argv[i], "--erase") == 0) {
             options->force_erase = true;
         } else if (strcmp(argv[i], "-i") == 0 || strcmp(argv[i], "--index") == 0) {

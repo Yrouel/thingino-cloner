@@ -25,6 +25,7 @@ typedef struct {
     char* uboot_file;
     char* output_file;
     char* input_file;
+    bool force_erase;
     bool skip_ddr;
 } cli_options_t;
 
@@ -40,6 +41,7 @@ void print_usage(const char* program_name) {
     printf("  -b, --bootstrap         Bootstrap device to firmware stage\n");
     printf("  -r, --read <file>       Read firmware from device to file\n");
     printf("  -w, --write <file>       Write firmware from file to device\n");
+    printf("      --erase              Request full flash erase before writing (when supported)\n");
     printf("  --config <file>         Custom DDR configuration file\n");
     printf("  --spl <file>            Custom SPL file\n");
     printf("  --uboot <file>          Custom U-Boot file\n");
@@ -106,6 +108,10 @@ thingino_error_t parse_arguments(int argc, char* argv[], cli_options_t* options)
             options->uboot_file = argv[++i];
         } else if (strcmp(argv[i], "--skip-ddr") == 0) {
             options->skip_ddr = true;
+        } else if (strcmp(argv[i], "--auto-ddr") == 0) {
+            options->auto_ddr = true;
+        } else if (strcmp(argv[i], "--erase") == 0) {
+            options->force_erase = true;
         } else if (strcmp(argv[i], "-i") == 0 || strcmp(argv[i], "--index") == 0) {
             if (i + 1 >= argc) {
                 printf("Error: %s requires a device index\n", argv[i]);
@@ -794,7 +800,7 @@ thingino_error_t write_firmware_from_file(usb_manager_t* manager, int device_ind
     printf("  Source file: %s\n", firmware_file);
     printf("\n");
 
-    result = write_firmware_to_device(device, firmware_file, fw_binary);
+    result = write_firmware_to_device(device, firmware_file, fw_binary, options->force_erase);
     if (result != THINGINO_SUCCESS) {
         fprintf(stderr, "Error: Firmware write failed: %s\n", thingino_error_to_string(result));
         usb_device_close(device);

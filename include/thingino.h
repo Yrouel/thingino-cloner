@@ -340,7 +340,8 @@ thingino_error_t firmware_handshake_init(usb_device_t* device);
 // Firmware writer functions
 thingino_error_t write_firmware_to_device(usb_device_t* device,
                                          const char* firmware_file,
-                                         const firmware_binary_t* fw_binary);
+                                         const firmware_binary_t* fw_binary,
+                                         bool force_erase);
 thingino_error_t send_bulk_data(usb_device_t* device, uint8_t endpoint,
                                 const uint8_t* data, uint32_t size);
 

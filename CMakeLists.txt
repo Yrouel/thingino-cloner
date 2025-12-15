@@ -26,7 +26,16 @@ endif()
 
 if (LIBUSB_PKG_FOUND AND NOT CMAKE_CROSSCOMPILING)
     set(LIBUSB_INCLUDE_DIRS ${LIBUSB_PKG_INCLUDE_DIRS})
-    set(LIBUSB_LIBRARIES ${LIBUSB_PKG_LIBRARIES})
+    # Use full linker flags on macOS to ensure library paths are included
+    if (APPLE AND LIBUSB_PKG_LDFLAGS)
+        set(LIBUSB_LIBRARIES ${LIBUSB_PKG_LDFLAGS})
+    else()
+        set(LIBUSB_LIBRARIES ${LIBUSB_PKG_LIBRARIES})
+    endif()
+    # Also add library directories to linker search path
+    if (LIBUSB_PKG_LIBRARY_DIRS)
+        link_directories(${LIBUSB_PKG_LIBRARY_DIRS})
+    endif()
 endif()
 
 set(LIBUSB_SEARCH_DIRS)

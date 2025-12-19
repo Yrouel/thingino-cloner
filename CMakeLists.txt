@@ -48,12 +48,33 @@ endif()
 list(APPEND LIBUSB_SEARCH_DIRS /usr /usr/local /opt/homebrew)
 list(REMOVE_DUPLICATES LIBUSB_SEARCH_DIRS)
 
+set(_LIBUSB_MULTIARCH "")
+if (UNIX AND NOT APPLE)
+    set(_libusb_multiarch_compiler "${CMAKE_C_COMPILER}")
+    if (NOT _libusb_multiarch_compiler AND CMAKE_CXX_COMPILER)
+        set(_libusb_multiarch_compiler "${CMAKE_CXX_COMPILER}")
+    endif()
+    if (_libusb_multiarch_compiler)
+        execute_process(
+            COMMAND ${_libusb_multiarch_compiler} -print-multiarch
+            OUTPUT_VARIABLE _LIBUSB_MULTIARCH
+            OUTPUT_STRIP_TRAILING_WHITESPACE
+            ERROR_QUIET)
+    endif()
+endif()
+
 if (NOT LIBUSB_INCLUDE_DIRS OR NOT LIBUSB_LIBRARIES)
     set(LIBUSB_INCLUDE_HINTS)
     set(LIBUSB_LIBRARY_HINTS)
     foreach(dir IN LISTS LIBUSB_SEARCH_DIRS)
         list(APPEND LIBUSB_INCLUDE_HINTS "${dir}/include" "${dir}/include/libusb-1.0")
         list(APPEND LIBUSB_LIBRARY_HINTS "${dir}/lib" "${dir}/lib64" "${dir}/lib/libusb-1.0" "${dir}/bin")
+        if (_LIBUSB_MULTIARCH)
+            list(APPEND LIBUSB_LIBRARY_HINTS
+                "${dir}/lib/${_LIBUSB_MULTIARCH}"
+                "${dir}/lib/${_LIBUSB_MULTIARCH}/libusb-1.0"
+                "${dir}/lib64/${_LIBUSB_MULTIARCH}")
+        endif()
     endforeach()
 
     find_path(LIBUSB_INCLUDE_DIR

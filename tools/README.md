@@ -17,7 +17,7 @@ sudo ./quick_write_analysis_with_binary.sh vendor_write firmware.bin
 # One command to capture and analyze
 sudo ./quick_write_analysis.sh vendor_write
 # Run vendor cloner, press Ctrl+C when done
-# Review vendor_write_sequence.c
+# Review ../references/vendor/vendor_write_sequence.c
 ```
 
 ### Manual Workflow
@@ -174,7 +174,7 @@ cat vendor_write_correlation_report.txt
 # - No match (data is transformed)
 
 # 3. Review generated code
-cat vendor_write_sequence.c
+cat ../references/vendor/vendor_write_sequence.c
 
 # 4. Implement in thingino-cloner
 # Edit src/usb/protocol.c based on findings
@@ -279,6 +279,6 @@ sudo apt-get install tshark
 ## See Also
 
 - [Full Documentation](../docs/USB_CAPTURE_FRAMEWORK.md)
-- [Bootstrap Analysis](../T20_BOOTSTRAP_ANALYSIS.md)
-- [DDR Extraction Guide](../CAPTURE_VENDOR_T20.md)
+- [Bootstrap Analysis](../docs/reports/T20_BOOTSTRAP_ANALYSIS.md)
+- [DDR Extraction Guide](../docs/reports/CAPTURE_VENDOR_T20.md)
 

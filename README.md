@@ -48,7 +48,7 @@ cd tools
 sudo ./quick_write_analysis.sh vendor_write
 
 # Follow the prompts, then review generated code
-cat vendor_write_sequence.c
+cat ../references/vendor/vendor_write_sequence.c
 ```
 
 ### Tools
@@ -58,14 +58,17 @@ cat vendor_write_sequence.c
 - **compare_usb_captures.py** - Compare vendor vs thingino captures
 - **analyze_write_operation.py** - Extract write sequences and generate code
 
-See [USB_CAPTURE_FRAMEWORK_SUMMARY.md](USB_CAPTURE_FRAMEWORK_SUMMARY.md) for details.
+See [USB_CAPTURE_FRAMEWORK_SUMMARY.md](docs/reports/USB_CAPTURE_FRAMEWORK_SUMMARY.md) for details.
 
 ## Documentation
 
 - [USB Capture Framework](docs/USB_CAPTURE_FRAMEWORK.md) - Complete capture/analysis guide
-- [USB Capture Summary](USB_CAPTURE_FRAMEWORK_SUMMARY.md) - Framework overview
+- [USB Capture Summary](docs/reports/USB_CAPTURE_FRAMEWORK_SUMMARY.md) - Framework overview
 - [Tools Quick Reference](tools/README.md) - Quick command reference
-- [T20 Bootstrap Analysis](T20_BOOTSTRAP_ANALYSIS.md) - T20-specific details
+- [T20 Bootstrap Analysis](docs/reports/T20_BOOTSTRAP_ANALYSIS.md) - T20-specific details
+- [Write Implementation Summary](docs/reports/WRITE_IMPLEMENTATION_SUMMARY.md) - State of the flash writer
+- [Workflow Diagram](docs/reports/WORKFLOW_DIAGRAM.md) - High-level process overview
+- [Repository Structure](docs/STRUCTURE.md) - How files are organized and where to add new work
 - [DDR Integration](docs/DDR_INTEGRATION_SUMMARY.md) - DDR configuration details
 - [Embedded Firmware](docs/EMBEDDED_FIRMWARE.md) - Firmware database details
 
@@ -106,16 +109,21 @@ See [USB_CAPTURE_FRAMEWORK_SUMMARY.md](USB_CAPTURE_FRAMEWORK_SUMMARY.md) for det
 
 ```
 thingino-cloner/
-├── src/                    # Source code
-│   ├── usb/               # USB protocol implementation
-│   ├── ddr/               # DDR configuration
-│   ├── firmware/          # Firmware database
-│   └── bootstrap.c        # Bootstrap implementation
-├── include/               # Header files
-├── tools/                 # USB capture and analysis tools
-├── docs/                  # Documentation
-├── references/            # Reference implementations and captures
-└── build/                 # Build output
+├── src/                      # Production sources (bootstrap, USB, DDR, firmware)
+├── include/                  # Public headers
+├── scripts/                  # Lightweight helpers (analysis/ + capture/)
+├── tools/                    # Full USB capture + analysis toolchain
+├── tests/
+│   ├── unit/                 # DDR, firmware, USB unit tests
+│   ├── integration/          # High-level workflow tests
+│   └── legacy/               # Historical experiments kept for reference
+├── docs/
+│   ├── reports/              # Deep dives, timelines, and logs
+│   └── *.md                  # Architecture + integration guides
+├── references/
+│   ├── vendor/               # Captures, firmware, DDR blobs, logs
+│   └── ddr/                  # Project-authored DDR artifacts
+└── build/                    # Generated build output (gitignored)
 ```
 
 ## Requirements

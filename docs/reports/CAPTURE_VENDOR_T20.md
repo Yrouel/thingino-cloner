@@ -14,13 +14,13 @@ sudo apt-get install tcpdump tshark wireshark
 In **Terminal 1**, run the capture script:
 
 ```bash
-sudo ./capture_vendor_t20.sh
+sudo ./scripts/capture/capture_vendor_t20.sh
 ```
 
 This will:
 - Start capturing all USB traffic
 - Wait for you to run the vendor tool
-- Save the capture to `vendor_t20_analysis/vendor_t20_capture_TIMESTAMP.pcap`
+- Save the capture to `references/vendor/captures/vendor_t20_analysis/vendor_t20_capture_TIMESTAMP.pcap`
 
 ## Step 2: Run Vendor Tool
 
@@ -44,14 +44,16 @@ The script will automatically try to extract the DDR binary.
 If the automatic extraction didn't work, use the Python script:
 
 ```bash
-python3 extract_ddr_from_pcap.py vendor_t20_analysis/vendor_t20_capture_*.pcap vendor_ddr_t20.bin
+python3 scripts/analysis/extract_ddr_from_pcap.py \
+	references/vendor/captures/vendor_t20_analysis/vendor_t20_capture_*.pcap \
+	references/vendor/ddr/vendor_ddr_t20.bin
 ```
 
 This will:
 - Parse the pcap file
 - Find the 324-byte DDR binary (looks for "FIDB" marker)
 - Extract and analyze it
-- Save to `vendor_ddr_t20.bin`
+- Save to `references/vendor/ddr/vendor_ddr_t20.bin`
 
 ## Step 5: Compare with Our Generated Binary
 
@@ -62,20 +64,20 @@ Compare the vendor's DDR binary with ours:
 xxd /tmp/t20_ddr_debug.bin > our_ddr.hex
 
 # Vendor's binary (from capture)
-xxd vendor_ddr_t20.bin > vendor_ddr.hex
+xxd references/vendor/ddr/vendor_ddr_t20.bin > references/vendor/ddr/vendor_ddr.hex
 
 # Compare side-by-side
-diff -y our_ddr.hex vendor_ddr.hex | less
+diff -y our_ddr.hex references/vendor/ddr/vendor_ddr.hex | less
 ```
 
 Or use a visual diff tool:
 
 ```bash
 # Meld (GUI)
-meld our_ddr.hex vendor_ddr.hex
+meld our_ddr.hex references/vendor/ddr/vendor_ddr.hex
 
 # Or vimdiff
-vimdiff our_ddr.hex vendor_ddr.hex
+vimdiff our_ddr.hex references/vendor/ddr/vendor_ddr.hex
 ```
 
 ## Step 6: Analyze Differences
@@ -96,7 +98,7 @@ Look for differences in:
 If you prefer a GUI:
 
 ```bash
-wireshark vendor_t20_analysis/vendor_t20_capture_*.pcap
+wireshark references/vendor/captures/vendor_t20_analysis/vendor_t20_capture_*.pcap
 ```
 
 Filter for USB bulk transfers:

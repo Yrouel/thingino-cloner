@@ -327,7 +327,9 @@ python3 analyze_write_with_binary.py vendor_write.pcap firmware.bin \
 3. **Analyze DDR binary:**
    ```bash
    # Use the existing DDR extraction tool
-   python3 ../extract_ddr_from_pcap.py usb_captures/vendor_bootstrap_t31_*.pcap vendor_ddr.bin
+   python3 ../scripts/analysis/extract_ddr_from_pcap.py \
+      usb_captures/vendor_bootstrap_t31_*.pcap \
+      vendor_ddr.bin
 
    # Compare with our generated DDR
    xxd vendor_ddr.bin > vendor_ddr.hex
@@ -538,7 +540,7 @@ After capturing and analyzing USB traffic:
 
 ## References
 
-- [Ingenic USB Boot Protocol](../T20_BOOTSTRAP_ANALYSIS.md)
+- [Ingenic USB Boot Protocol](reports/T20_BOOTSTRAP_ANALYSIS.md)
 - [DDR Binary Format](../../DDR_BINARY_FORMAT.md)
 - [Wireshark USB Capture Guide](https://wiki.wireshark.org/CaptureSetup/USB)
 - [Linux usbmon Documentation](https://www.kernel.org/doc/Documentation/usb/usbmon.txt)

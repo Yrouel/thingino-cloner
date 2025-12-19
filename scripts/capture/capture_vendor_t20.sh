@@ -6,7 +6,7 @@
 # that the vendor's cloner tool sends to a T20 device.
 #
 # Usage:
-#   1. Run this script as root: sudo ./capture_vendor_t20.sh
+#   1. Run this script as root: sudo ./scripts/capture/capture_vendor_t20.sh
 #   2. In another terminal, run the vendor's cloner tool
 #   3. Press Ctrl+C when done to stop capture
 #   4. The script will extract the DDR binary and firmware from the capture
@@ -16,7 +16,7 @@ set -e
 
 # Configuration
 CAPTURE_FILE="vendor_t20_capture.pcap"
-OUTPUT_DIR="vendor_t20_analysis"
+OUTPUT_DIR="references/vendor/captures/vendor_t20_analysis"
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
 
 # Colors for output

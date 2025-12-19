@@ -142,7 +142,7 @@ Created a comprehensive framework with 4 main tools, complete documentation, and
 cd thingino-cloner/tools
 sudo ./quick_write_analysis.sh vendor_write
 # Run vendor cloner, then press Ctrl+C
-# Review vendor_write_sequence.c
+# Review ../references/vendor/vendor_write_sequence.c
 ```
 
 ### Manual Workflow

@@ -114,8 +114,8 @@ Using vendor's reference DDR binary embedded in `src/ddr/t20_reference_ddr.h`:
 
 ### Captured Data:
 - **Source**: USB capture of vendor's cloner tool
-- **File**: `vendor_ddr_t20.bin` (324 bytes)
-- **Extraction**: `extract_ddr_from_pcap.py`
+- **File**: `references/vendor/ddr/vendor_ddr_t20.bin` (324 bytes)
+- **Extraction**: `scripts/analysis/extract_ddr_from_pcap.py`
 
 ### Key Findings:
 - FIDB section identical to our generated version
@@ -127,11 +127,11 @@ Using vendor's reference DDR binary embedded in `src/ddr/t20_reference_ddr.h`:
 
 ## Files for Reference
 
-- `vendor_ddr_t20.bin` - Vendor's DDR binary (324 bytes)
-- `capture_vendor_t20.sh` - USB capture script
-- `extract_ddr_from_pcap.py` - DDR extraction tool
-- `CAPTURE_VENDOR_T20.md` - Capture guide
-- `test_t20_vendor_ddr_log.txt` - Latest test log
+- `references/vendor/ddr/vendor_ddr_t20.bin` - Vendor's DDR binary (324 bytes)
+- `scripts/capture/capture_vendor_t20.sh` - USB capture script
+- `scripts/analysis/extract_ddr_from_pcap.py` - DDR extraction tool
+- `docs/reports/CAPTURE_VENDOR_T20.md` - Capture guide
+- `references/vendor/logs/test_t20_vendor_ddr_log.txt` - Latest test log
 
 ## Recommendations
 

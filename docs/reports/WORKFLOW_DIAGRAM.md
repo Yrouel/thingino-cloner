@@ -166,8 +166,8 @@
     ┌──────────────────────────────────────────────────────┐
     │ Output:                                              │
     │ - vendor_write_TIMESTAMP.pcap                        │
-    │ - vendor_write_sequence.c                            │
-    │ - vendor_write_sequence.py                           │
+    │ - references/vendor/vendor_write_sequence.c          │
+    │ - scripts/analysis/vendor_write_sequence.py          │
     │ - extracted_vendor_write/                            │
     └──────────────────────────────────────────────────────┘
            │
